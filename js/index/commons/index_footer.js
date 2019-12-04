@@ -1,0 +1,10 @@
+document.writeln("<div class=\"footer center\">");
+document.writeln("		<div class=\"ff\">");
+document.writeln("			<div class=\"fl\">");
+document.writeln("				<p>CopyRight 2012 by 郑州鑫地酒店管理有限公司 All Right Reserved 豫ICP备案号：07000368号 技术支持：郑州做网站</p>");
+document.writeln("				<p>地址：郑州市大学中路 120 号 电话：0371-87565869 传真：0371-8756****</p>");
+document.writeln("				<p>邮箱：xindihotel@sina.com</p>");
+document.writeln("				<p>官方微博</p>");
+document.writeln("			</div>");
+document.writeln("		</div>");
+document.writeln("	</div>");

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>CKEditor Sample</title>
+    <!--<script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>-->
+    <!-- 引入ckeditor.js文件 -->
+    <script src="ckeditor/ckeditor.js" ></script>
+    <script type="text/javascript"></script>
+    <script type="text/javascript" th:src="@{/webjars/jquery/3.3.1/jquery.js}"></script>
+</head>
+<body>
+    <form action="/uploadGallery" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="提交">
+    </form>
+
+
+    <form method="post" action="/uploadData" id="form1">
+            <textarea name="editor1" id="editor1" rows="10" cols="80">
+            </textarea>
+        <input type="submit" name="Submit" id="Submit">
+    </form>
+    <button id="a">asdnasld</button>
+</body>
+
+<script>
+    CKEDITOR.replace( 'editor1');
+    $("#a").click(function () {
+        var data = CKEDITOR.instances.editor1.getData();
+        alert(data);
+    })
+
+    $("#Submit").click(function () {
+        var data = CKEDITOR.instances.editor1.getData();
+        alert(data);
+    })
+
+</script>
+
+</html>

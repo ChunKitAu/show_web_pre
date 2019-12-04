@@ -1,0 +1,16 @@
+document.writeln("<!--头-->");
+document.writeln("<nav class=\"navbar \" th:fragment=\"head\" >");
+document.writeln("    <div class=\"row\" >");
+document.writeln("        <div class=\"col-md-12\">");
+document.writeln("            <nav class=\"navbar navbar-fixed-top\" role=\"navigation\">");
+document.writeln("                <div class=\"container\">");
+document.writeln("                    <div class=\"navbar-header\">");
+document.writeln("                        <a class=\"navbar-brand \" >后台管理</a>");
+document.writeln("                    </div>");
+document.writeln("                    <div id=\"navbar\" class=\"navbar-right\">");
+document.writeln("                    </div>");
+document.writeln("                </div>");
+document.writeln("            </nav>");
+document.writeln("        </div>");
+document.writeln("    </div>");
+document.writeln("</nav>");

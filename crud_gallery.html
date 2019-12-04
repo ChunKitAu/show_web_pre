@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+	<meta  />
+    <title>后台管理</title>
+
+    <script type="text/javascript" src="js/baguetteBox/baguetteBox.min.js"></script>
+
+   <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="css/gallery/htmleaf-demo.css">
+    <link rel="stylesheet" href="css/gallery/baguetteBox.min.css">
+
+    <link rel="stylesheet" href="css/gallery/gallery-clean.css">
+</head>
+
+<body>
+
+
+<script src="js/crud/commons/head.js"></script>
+<div class="container-fluid">
+
+        <div class="row">
+            <!--引入侧边栏-->
+            <script src="js/crud/commons/sidebar.js"></script>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+                <div class="htmleaf-container">
+
+                    <div class="container gallery-container">
+
+                        <h1>画廊图片选择</h1>
+                        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                            上传图片
+                        </button>
+                        <div class="tz-gallery">
+
+                            <div class="row" id="div0">
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <script src="js/initPagination.js"></script>
+
+            </main>
+
+        </div>
+    </div>
+
+</div>
+<script src="js/crud/commons/footer.js"></script>
+
+
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h3 class="modal-title" id="myModalLabel">
+                    上传画廊图片
+                </h3>
+            </div>
+            <div class="modal-body">
+                <form id="uploadForm" method="post" onsubmit="return false" action="##" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="inputfile">请选择要上传的图片</label>
+                        <input type="file" id="inputfile" name="file">
+                    </div>
+                    <button type="submit" class="btn btn-primary" onclick="uploadGallery()">提交</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+<script>
+
+
+</script>
+
+
+<script type="text/javascript" src="js/crud/crud_gallery.js"></script>
+<script type="text/javascript" src="js/logout.js"></script>
+<script type="text/javascript" src="js/pagination.js"></script>
+
+</html>

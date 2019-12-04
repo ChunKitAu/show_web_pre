@@ -1,0 +1,358 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 黑体;
+
+}
+
+/*内外边距为0，去下划线、列表标点，字体*/
+.center {
+    margin: 0 auto;
+}
+
+
+.fr {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/*header*/
+header {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+header .tlogo {
+    width: 100%;
+    height: 150px;
+}
+
+/*头部LOGO部分*/
+/*导航*/
+header .nav {
+    width: 100%;
+    height: 40px;
+    background: #337ab7;
+    overflow: hidden;
+}
+
+header .nav1 {
+    width: 1200px;
+    height: 45px;
+}
+
+header .nav .nav1 ul li {
+    float: left;
+    margin: 0;
+    height: 45px;
+}
+
+header .nav .nav1 ul li:hover {
+    background: #DF3A01;
+}
+
+header .nav .nav1 ul li a {
+    display: block;
+    margin : 0px;
+    padding: 0 40px;
+    font-size: 18px;
+    font-family: 黑体;
+    color: #FFFFFF;
+}
+
+header div a img {
+    width: 100%;
+    height: 400px;
+}
+
+/*公告部分*/
+.info {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    background: #F1FAFA;
+}
+
+.info1 {
+    width: 1000px;
+    height: 350px;
+}
+
+.info1 .left {
+    width: 400px;
+    height: 300px;
+    float: left;
+}
+
+.infol .left span {
+    float: right;
+    margin: 0;
+}
+
+
+
+.new1 {
+    border-top: 5px solid #AC3F0D;
+}
+
+.new1 ul {
+    margin-top: 20px;
+}
+
+.new1 ul li {
+    border-bottom: 1px dashed #DAD5D3;
+    margin-top: 12px;
+}
+
+.new1 ul li a {
+    color: black;
+}
+
+.new1 ul li a:hover {
+    color: #088A08;
+}
+
+.new1 ul li span {
+    float: right;
+}
+
+.info1 .right {
+    width: 400px;
+    height: 300px;
+    float: right;
+}
+
+.infol .right span {
+    float: right;
+}
+
+.title_1 {
+    width: 400px;
+}
+
+.title_1 h3 {
+    color: #AC3F0D;
+    margin: 0;
+}
+
+.title_1 h3 span a {
+    float: right;
+    font-size: 14px;
+    color: #AC3F0D;
+}
+
+
+.title_2 {
+    width: 400px;
+}
+
+.title_2 h3 {
+    color: #0B6735;
+    margin: 0;
+}
+
+.title_2 span a {
+    float: right;
+    font-size: 14px;
+    color: #0B6735;
+}
+
+.new2 {
+    border-top: 5px solid #0B6735;
+}
+
+.new2 ul {
+    margin-top: 20px;
+}
+
+.new2 ul li {
+    border-bottom: 1px dashed #DAD5D3;
+    margin-top: 12px;
+}
+
+.new2 ul li a {
+    color: black;
+}
+
+.new2 ul li a:hover {
+    color: #088A08;
+}
+
+.new2 ul li span {
+    float: right;
+}
+
+/*页脚*/
+
+.footer{
+    width: 100%;
+    height: 150px;
+    /*margin-top: 120px;*/
+    color: white;
+    background-color: #337ab7;
+    overflow-y: hidden;
+}
+
+.ff{
+    width: 1200px;
+    height: 150px;
+    /*float: left;*/
+    margin: 20px auto 0px auto;
+    overflow-y: hidden;
+}
+.fl{
+     /*width: 1050px;*/
+     height: 150px;
+     /*margin-top: 25px;*/
+     margin-left: 120px;
+     /*float: left;*/
+     overflow-y: hidden;
+ }
+.ff p{
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+}
+
+/*MORE.html部分*/
+.ctn {
+    width: 1200px;
+    height: 650px;
+}
+
+.ctn .left {
+    float: left;
+    width: 250px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+.ctn .left .pos {
+    margin-bottom: 5px;
+}
+
+.ctn .left .pos a {
+    color: #000000;
+    font-family: "宋体";
+}
+
+.ctn .left .pos a:hover {
+    color: #77A473;
+}
+
+.ctn .left img {
+    width: 250px;
+}
+
+.ctn .left .link {
+    height: 300px;
+}
+
+.ctn .left .link a {
+    margin-top: 0;
+    color: #343533;
+    height: 40px;
+    display: block;
+    border-bottom: 1px dashed #DAD5D3;
+}
+
+.ctn .left .link a:hover {
+    color: #77A473;
+    border-bottom: 1px dashed #77A473;
+    background: #E8EFE0;
+}
+
+.ctn .left .link a div {
+    float: left;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.ctn .left .link a span {
+    float: right;
+    display: none;
+}
+
+/*不显示*/
+.ctn .left .link a:hover span {
+    display: initial;
+    margin-top: 10px;
+}
+
+.ctn .right {
+    float: right;
+    width: 800px;
+    margin-top: 20px;
+}
+
+.ctn .right .new {
+    width: 800px;
+    height: 600px;
+}
+
+.ctn .right .new a {
+    margin-top: 12px;
+    color: #868282;
+    height: 20px;
+    display: block;
+    border-bottom: 1px dashed #DAD5D3;
+}
+
+.ctn .right .new a:hover {
+    color: #77A473;
+    border-bottom: 1px dashed #77A473;
+}
+
+.ctn .right .new a div {
+    float: left;
+}
+
+.ctn .right .new a span {
+    float: right;
+}
+
+/*文章Article.html*/
+.article {
+    height: 200px;
+}
+
+.article table {
+    margin: 0 auto
+}
+
+.article tr {
+    height: 20px
+}
+
+.article .t1 {
+    font-size: 40px
+}
+
+/*画廊*/
+.slider {
+    overflow: hidden;
+    width: 100vw;
+    position: relative;
+}
+
+div.item  img{
+    width: 100%;
+    height:auto;
+}
+div#myCarousel{
+    margin: 0 auto;
+}
+
+a#left carousel-control{
+    position: absolute;
+}
+a#right carousel-control{
+    position: absolute;
+}
+
