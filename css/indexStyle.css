@@ -4,14 +4,17 @@
     text-decoration: none;
     list-style-type: none;
     font-family: 黑体;
-
+    overflow-x:hidden;
+    line-height: 1;
 }
 
 /*内外边距为0，去下划线、列表标点，字体*/
 .center {
     margin: 0 auto;
 }
-
+.fl{
+    float: left;
+}
 
 .fr {
     float: right;
@@ -24,7 +27,7 @@
 /*header*/
 header {
     width: 100%;
-    height: 600px;
+    height: auto;
     overflow: hidden;
 }
 
@@ -33,24 +36,34 @@ header .tlogo {
     height: 150px;
 }
 
+header .tlogo img
+{
+    width: 140px;
+    height: 140px;
+}
+
+
 /*头部LOGO部分*/
 /*导航*/
 header .nav {
     width: 100%;
-    height: 40px;
-    background: #337ab7;
+    height: auto;
+    background: #2B589C;
     overflow: hidden;
+    border-top: 8px solid #174D9E;
 }
 
 header .nav1 {
     width: 1200px;
-    height: 45px;
-}
 
+}
+header .nav .nav1 ul{
+    margin-bottom: 0;
+}
 header .nav .nav1 ul li {
     float: left;
     margin: 0;
-    height: 45px;
+    height: auto;
 }
 
 header .nav .nav1 ul li:hover {
@@ -59,11 +72,12 @@ header .nav .nav1 ul li:hover {
 
 header .nav .nav1 ul li a {
     display: block;
-    margin : 0px;
+    margin : 12px;
     padding: 0 40px;
     font-size: 18px;
     font-family: 黑体;
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 header div a img {
@@ -76,7 +90,6 @@ header div a img {
     width: 100%;
     height: 400px;
     margin-top: 40px;
-    background: #F1FAFA;
 }
 
 .info1 {
@@ -189,101 +202,140 @@ header div a img {
 }
 
 /*页脚*/
-
 .footer{
     width: 100%;
     height: 150px;
-    /*margin-top: 120px;*/
+    margin-top:120px;
     color: white;
-    background-color: #337ab7;
-    overflow-y: hidden;
-}
 
-.ff{
-    width: 1200px;
-    height: 150px;
-    /*float: left;*/
-    margin: 20px auto 0px auto;
+    background-color: #2B589C;
     overflow-y: hidden;
 }
-.fl{
-     /*width: 1050px;*/
-     height: 150px;
-     /*margin-top: 25px;*/
-     margin-left: 120px;
-     /*float: left;*/
-     overflow-y: hidden;
- }
-.ff p{
-    font-size: 14px;
-    line-height: 25px;
+.ff{
+    width:1000px;height: 150px;
+}
+.f1{
+    width: 200px;height: 150px;
+}
+.f1 table{
+    margin-top: 20px;
+    border-right: 1px solid #FFFFFF;
+}
+.f1 table tr td{
     text-align: center;
 }
-
+.f1 table tr td a{
+    color: #FFFFFF;
+    margin-right:50px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-family: "宋体";
+}
+.f1 table tr th p{
+    color: #FFFFFF;
+    margin-right:50px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: "宋体";
+}
+.f1 table tr td a:hover{
+    color:#ff6700;
+}
+.f2{
+    width:200px;
+    height: 120px;
+    margin-top: 20px;
+}
+.f2 p{
+    text-align: center;
+}
+.f2 div{
+    background: url("../img/二维码.png") no-repeat center center;
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    margin-left: 60px;
+}
 /*MORE.html部分*/
 .ctn {
     width: 1200px;
-    height: 650px;
+    height: 1000px;
 }
 
-.ctn .left {
+.ctn .left{
     float: left;
     width: 250px;
-    height: 300px;
+    height: auto;
     margin-top: 20px;
+    border-color: #6E6E6E;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
 }
-
-.ctn .left .pos {
-    margin-bottom: 5px;
+.pos{
+    background: #174D9E;
+    height: 50px;
 }
-
-.ctn .left .pos a {
-    color: #000000;
+.pos1{
+    margin-top: 15px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.pos1 b{
+    color: #FFFFFF;
     font-family: "宋体";
 }
-
-.ctn .left .pos a:hover {
+.pos a{
+    color: #FFFFFF;
+    font-family: "宋体";
+}
+.pos a:hover{
     color: #77A473;
+    text-decoration: none;
 }
-
-.ctn .left img {
-    width: 250px;
+.link{
+    height: auto;
 }
-
-.ctn .left .link {
-    height: 300px;
-}
-
-.ctn .left .link a {
+.link a{
     margin-top: 0;
     color: #343533;
     height: 40px;
     display: block;
-    border-bottom: 1px dashed #DAD5D3;
+    border-top: 2px solid #6E6E6E;
 }
-
-.ctn .left .link a:hover {
+.link a:hover{
     color: #77A473;
-    border-bottom: 1px dashed #77A473;
-    background: #E8EFE0;
 }
-
-.ctn .left .link a div {
-    float: left;
+.link a span{
+    display: inline-block;
+    margin-left: 10px;
+}
+.link a span p{
     font-size: 16px;
+    margin-bottom: 5px;
+    font-family: "宋体";
+}
+.link a span div{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
     margin-top: 10px;
+    margin-left: 20px;
+    background: url("../img/箭头1.jpg") no-repeat center center;
+    background-size: cover;
+}
+.link a:hover span div{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/箭头2.jpg") no-repeat center center;
+    background-size: cover;
+    margin-top: 10px;
+    margin-left: 20px;
 }
 
-.ctn .left .link a span {
-    float: right;
-    display: none;
-}
-
-/*不显示*/
-.ctn .left .link a:hover span {
-    display: initial;
-    margin-top: 10px;
-}
 
 .ctn .right {
     float: right;
@@ -342,8 +394,8 @@ header div a img {
 }
 
 div.item  img{
+    max-height: 460px;
     width: 100%;
-    height:auto;
 }
 div#myCarousel{
     margin: 0 auto;
@@ -355,4 +407,3 @@ a#left carousel-control{
 a#right carousel-control{
     position: absolute;
 }
-
