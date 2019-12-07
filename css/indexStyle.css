@@ -261,7 +261,7 @@ header div a img {
 /*MORE.html部分*/
 .ctn {
     width: 1200px;
-    height: 1000px;
+    height: auto;
 }
 
 .ctn .left{
@@ -307,6 +307,7 @@ header div a img {
 }
 .link a:hover{
     color: #77A473;
+    text-decoration: none;
 }
 .link a span{
     display: inline-block;
