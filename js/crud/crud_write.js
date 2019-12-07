@@ -35,6 +35,7 @@ function getValue(id){
                 $('#title').val(result.data.title);
                 $('#type').val(result.data.type);
                 $('#reblog').val(result.data.reblog);
+                $('#author').val(result.data.author);
                 $('#editor1').val(result.data.content);
             }
 			
@@ -96,6 +97,7 @@ function Submit(){
                 title:$("#title").val(),
                 type:$("#type").val(),
                 reblog:$("#reblog").val(),
+                author:$("#author").val(),
                 content:CKEDITOR.instances.editor1.getData(),
             },
             success:function (result) {
