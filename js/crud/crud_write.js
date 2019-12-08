@@ -1,6 +1,10 @@
-CKEDITOR.replace( 'editor1');
-var id = null;
+var ckeditor = CKEDITOR.replace( 'editor1');
 
+
+// var host = "http://127.0.0.1:8080";
+var host = "http://10.0.57.28:8080";
+
+var id = null;
 $(function () {
     //获取url参数
     var parameterURL =location.search.substring(1, location.search.length);
@@ -21,7 +25,7 @@ $(function () {
 
 function getValue(id){
     $.ajax({
-        url: "http://10.0.57.28:8080/article/getById",
+        url: host+"/article/getById",
         type: "GET",
 		dataType:"json",
 		data:{id:id},
@@ -53,7 +57,7 @@ function Submit(){
     //发布文章
     if(id == null){
         $.ajax({
-            url:"http://10.0.57.28:8080/article",
+            url:host+"/article",
             dataType:"json",
             type:"POST",
 			jsonp:"callback", 
@@ -85,7 +89,7 @@ function Submit(){
     }else{
         //修改文章
         $.ajax({
-            url:"http://10.0.57.28:8080/article",
+            url:host+"/article",
             dataType:"json",
             type:"PUT",
 			jsonp:"callback", 
@@ -123,7 +127,7 @@ $("#type").change(function () {
     var val = $('#type option:selected').val();//选中的值
     if(val == "项目组介绍" || val == "实验室介绍" || val == "联系我们"){
         $.ajax({
-            url: "http://10.0.57.28:8080/article/getIdByType?type=" + val,
+            url: host+"/article/getIdByType?type=" + val,
             type: "GET",
 			xhrFields: {
 				withCredentials: true, // 这里设置了withCredentials

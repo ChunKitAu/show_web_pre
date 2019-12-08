@@ -27,7 +27,7 @@ function getDemoList() {
                     a.innerText = item.title;
                     a.href="index_article.html?id="+item.id+"&type=学术动态";
                     var span = document.createElement('span');
-                    span.innerText = item.time.substring(1,10);
+                    span.innerText = item.time.substring(2,10);
 
                     li.appendChild(a);
                     li.appendChild(span);
@@ -64,7 +64,7 @@ function getLearningList() {
                     a.innerText = item.title;
                     a.href="index_article.html?id="+item.id+"&type=项目案例/成果";
                     var span = document.createElement('span');
-                    span.innerText = item.time.substring(1,10);
+                    span.innerText = item.time.substring(2,10);
 
                     li.appendChild(a);
                     li.appendChild(span);

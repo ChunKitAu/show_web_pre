@@ -1,8 +1,9 @@
 $("#logout").click(function () {
-
+    // var host = "http://127.0.0.1:8080";
+    var host = "http://10.0.57.28:8080";
     if(confirm("确定要退出吗?")){
         $.ajax({
-            url:"http://10.0.57.28:8080/logout",
+            url:host+"/logout",
             type:"GET",
 			crossDomain: true,
 			xhrFields: {

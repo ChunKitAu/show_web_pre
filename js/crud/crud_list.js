@@ -1,15 +1,15 @@
+// var host = "http://127.0.0.1:8080";
+var host = "http://10.0.57.28:8080";
 $(function () {
-	// if(sessionStorage.getItem("authToken") == null){
-	// 	window.location.href = "login.html";
-	// } 
     toPage(1);
 });
+
 
 function toPage(pn) {
     var totalRecord, currentPage;
 	
     $.ajax({
-        url: "http://10.0.57.28:8080/article/list?pn=" + pn,
+        url: host+"/article/list?pn=" + pn,
         type: "GET",
 		dataType:'json',
 		crossDomain: true,
