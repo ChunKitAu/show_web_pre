@@ -36,14 +36,14 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removeButtons = 'Source,Save,NewPage,Preview,Print,Templates,Cut,Copy,Paste,PasteText,PasteFromWord,Undo,Redo,Find,Replace,SelectAll,Scayt,Form,Checkbox,Radio,ImageButton,TextField,Textarea,HiddenField,Select,Button,Superscript,Subscript,CopyFormatting,RemoveFormat,Blockquote,CreateDiv,BidiLtr,BidiRtl,Language,Anchor,About,ShowBlocks,SpecialChar,Smiley,PageBreak,Iframe';
 
 	//上传图片路径
-	config.filebrowserImageUploadUrl  = "http://127.0.0.1:8080/uploadImage";
+	config.filebrowserImageUploadUrl  = "http://10.0.57.28:8080/uploadImage";
 	//文件上传路径
 	// config.filebrowserUploadUrl  = "/uploadImage";
 	config.filebrowserHtml5videoUploadUrl = "http://10.0.57.28:8080/uploadVdeio";
 
 
 	// 配置粘贴的图片的上传路径
-	config.uploadUrl="http://127.0.0.1:8080/uploadImage";
+	config.uploadUrl="http://10.0.57.28:8080/uploadImage";
 
 	// 添加图片粘贴插件
 	config.extraPlugins="imagepaste";

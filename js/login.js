@@ -1,6 +1,7 @@
 function login() {
 
-	var host = "http://127.0.0.1:8080";
+	var host = "http://10.0.57.28:8080";
+	// var host = "http://127.0.0.1:8080";
 	//表单的数据用ajax发送 避免页面跳转
 	$.ajax({
 		url: host+"/login",
