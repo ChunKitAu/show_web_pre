@@ -402,7 +402,7 @@ header div a img {
 }
 
 div.item  img{
-    max-height: 460px;
+    max-height: 400px;
     width: 100%;
 }
 div#myCarousel{
