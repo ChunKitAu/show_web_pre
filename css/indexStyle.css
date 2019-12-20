@@ -79,6 +79,11 @@ header .nav .nav1 ul li a {
     color: #FFFFFF;
     text-decoration: none;
 }
+header .nav .nav1 ul img{
+    height: 40px;
+    width: 51px;
+    float: left;
+}
 
 header div a img {
     width: 100%;
@@ -204,59 +209,61 @@ header div a img {
 /*页脚*/
 .footer{
     width: 100%;
-    height: 150px;
+    height: 200px;
     margin-top:120px;
     color: white;
 
     background-color: #2B589C;
     overflow-y: hidden;
+
 }
 .ff{
-    width:1000px;height: 150px;
+    width:800px;height: 160px;
+    border-bottom: 1px solid #FFFFFF;
 }
 .f1{
     width: 200px;height: 150px;
 }
-.f1 table{
+.f1 .flogo{
+    width: 100px;
+    height: 100px;
     margin-top: 20px;
-    border-right: 1px solid #FFFFFF;
-}
-.f1 table tr td{
-    text-align: center;
-}
-.f1 table tr td a{
-    color: #FFFFFF;
-    margin-right:50px;
     display: inline-block;
-    margin-bottom: 10px;
-    font-size: 14px;
-    font-family: "宋体";
-}
-.f1 table tr th p{
-    color: #FFFFFF;
-    margin-right:50px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-family: "宋体";
-}
-.f1 table tr td a:hover{
-    color:#ff6700;
 }
 .f2{
-    width:200px;
+    width: 400px;
     height: 120px;
     margin-top: 20px;
 }
-.f2 p{
-    text-align: center;
+.f2 img{
+    width: 20px;
+    height: 20px;
+    vertical-align:middle;
 }
 .f2 div{
-    background: url("../img/二维码.png") no-repeat center center;
+    margin-top: 12px;
+}
+
+
+.f3{
+    width:200px;
+    height: 120px;
+    margin-top: 25px;
+}
+.f3 p{
+    text-align: center;
+}
+.f3 div{
+    background: url("../img/zhbit.jpg") no-repeat center center;
     background-size: cover;
     width: 80px;
     height: 80px;
     display: inline-block;
     margin-left: 60px;
+}
+.f4{
+    width:800px;
+    margin-top: 10px;
 }
 /*MORE.html部分*/
 .ctn {
