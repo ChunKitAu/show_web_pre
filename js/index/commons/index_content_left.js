@@ -4,7 +4,7 @@ document.writeln("					<div class=\'pos1\'>");
 document.writeln("						<b>当前位置：</b>");
 document.writeln("						<a href=\'index.html\' >首页</a>");
 document.writeln("						<b>> <b/>");
-document.writeln("						<a href=\'index_list.html\' >学术动态</a>");
+document.writeln("						<a id=\'localA\' ></a>");
 document.writeln("					</div>");
 document.writeln("				</div>");
 document.writeln("				<div class=\'link\'>");

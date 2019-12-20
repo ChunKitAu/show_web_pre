@@ -14,7 +14,7 @@ function toPage(pn) {
         //获取文章类型
         var type = getUrlParam("type");
 		//显示位置：
-		
+        $("#localA").text("");
         $("#localA").append(type).attr("href","index_list.html?type="+type);
 
         getList(type);
