@@ -5,7 +5,7 @@
     list-style-type: none;
     font-family: 黑体;
     overflow-x:hidden;
-    line-height: 1;
+
 }
 
 /*内外边距为0，去下划线、列表标点，字体*/
@@ -95,6 +95,7 @@ header div a img {
     width: 100%;
     height: 400px;
     margin-top: 40px;
+    line-height:1;
 }
 
 .info1 {
@@ -104,7 +105,7 @@ header div a img {
 
 .info1 .left {
     width: 400px;
-    height: 300px;
+    height: auto;
     float: left;
 }
 
@@ -142,7 +143,7 @@ header div a img {
 
 .info1 .right {
     width: 400px;
-    height: 300px;
+    height: auto;
     float: right;
 }
 
@@ -220,6 +221,7 @@ header div a img {
 .ff{
     width:800px;height: 160px;
     border-bottom: 1px solid #FFFFFF;
+    line-height:1;
 }
 .f1{
     width: 200px;height: 150px;
@@ -280,6 +282,7 @@ header div a img {
     border-style: solid;
     border-radius: 10px;
     border-width: 2px;
+    line-height:1;
 }
 .pos{
     background: #174D9E;
@@ -349,6 +352,7 @@ header div a img {
     float: right;
     width: 800px;
     margin-top: 20px;
+    line-height:normal;
 }
 
 .ctn .right .new {
