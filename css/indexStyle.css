@@ -292,6 +292,12 @@ header div a img {
     margin-top: 15px;
     margin-left: 10px;
     font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #FFFFFF;
+}
+.pos1:hover{
+    color: #77A473;
 }
 .pos1 b{
     color: #FFFFFF;
