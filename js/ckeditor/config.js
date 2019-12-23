@@ -5,50 +5,45 @@
 
 CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
-	// config.language = 'fr';
+    config.language = 'zh-cn';
 	// config.uiColor = '#AADC6E';
-	
-	//添加html5video  需要添加html5video，clipboard，lineutils，widget，widgetselection 进plugins
-	config.extraPlugins= 'html5video';
 
-	//添加onChange插件
-	// config.extraPlugins = 'onchange';
-	//检测更新的时间间隔  ：5s
-	// config.minimumChangeMilliseconds = 100; // 100 milliseconds (default value)
-
-	//toolbar 显示的组件
-	config.toolbarGroups = [
-			{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
-			{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
-			{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
-			{ name: 'forms', groups: [ 'forms' ] },
-			{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-			{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
-			{ name: 'links', groups: [ 'links' ] },
-			{ name: 'insert', groups: [ 'insert' ] },
-			'/',
-			{ name: 'styles', groups: [ 'styles' ] },
-			{ name: 'colors', groups: [ 'colors' ] },
-			{ name: 'tools', groups: [ 'tools' ] },
-			{ name: 'others', groups: [ 'others' ] },
-			{ name: 'about', groups: [ 'about' ] }
-		];
-	config.removeButtons = 'Source,Save,NewPage,Preview,Print,Templates,Cut,Copy,Paste,PasteText,PasteFromWord,Undo,Redo,Find,Replace,SelectAll,Scayt,Form,Checkbox,Radio,ImageButton,TextField,Textarea,HiddenField,Select,Button,Superscript,Subscript,CopyFormatting,RemoveFormat,Blockquote,CreateDiv,BidiLtr,BidiRtl,Language,Anchor,About,ShowBlocks,SpecialChar,Smiley,PageBreak,Iframe';
-
-	//上传图片路径
-	config.filebrowserImageUploadUrl  = "http://10.0.57.28:8080/uploadImage";
-	//文件上传路径
-	// config.filebrowserUploadUrl  = "/uploadImage";
-	config.filebrowserHtml5videoUploadUrl = "http://10.0.57.28:8080/uploadVdeio";
+    config.toolbar = [
+        { name: 'document', items: [ 'Source'] },
+        { name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', ] },
+        { name: 'paragraph', items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },
+        { name: 'links', items: [ 'Link', 'Unlink'] },
+        { name: 'insert', items: [ 'Image', 'Html5video', 'Table', 'HorizontalRule' ] },
+        '/',
+        { name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize' ] },
+        { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+        { name: 'tools', items: [ 'Maximize'] },
+    ];
 
 
-	// 配置粘贴的图片的上传路径
-	config.uploadUrl="http://10.0.57.28:8080/uploadImage";
+    //上传图片路径
+    config.filebrowserImageUploadUrl  = "http://10.0.57.28:8080/uploadImage";
+    //文件上传路径
+    // config.filebrowserUploadUrl  = "/uploadImage";
 
-	// 添加图片粘贴插件
-	config.extraPlugins="imagepaste";
+    //html5视频上传路径
+    config.filebrowserHtml5videoUploadUrl = "http://10.0.57.28:8080/uploadVdeio";
 
+    //flah上传
+    // config.filebrowserFlashUploadUrl ="";
 
+    // 配置粘贴的图片的上传路径
+    config.uploadUrl="http://10.0.57.28:8080/uploadImage";
+    // 添加图片粘贴插件
+    config.extraPlugins="imagepaste";
+
+    //工具栏默认是否展开
+    config.toolbarStartupExpanded = true;
+    //工具栏是否可以被收缩
+    config.toolbarCanCollapse = true;
+
+    //当用户键入TAB时，编辑器走过的空格数，(&nbsp;) 当值为0时，焦点将移出编辑框  如果不设置则无任何效果
+    config.tabSpaces = 4;
 
 
 };
