@@ -7,7 +7,7 @@ $(function () {
 
 function initGallery() {
     $.ajax({
-        url:"http://10.0.57.28:8080/Gallery/isSelect",
+        url:"http://120.25.237.83:8096/Gallery/isSelect",
         type: "get",
 		dataType:"json",
 		jsonp:"callback", 

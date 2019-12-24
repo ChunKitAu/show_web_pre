@@ -6,7 +6,7 @@ $(function () {
 function toPage(pn) {
     currentPage = pn;
     $.ajax({
-        url: "http://10.0.57.28:8080/Gallery/list?pn=" + pn,
+        url: "http://120.25.237.83:8096/Gallery/list?pn=" + pn,
         type: "GET",
 		xhrFields: {
 			withCredentials: true, // 这里设置了withCredentials
@@ -61,7 +61,7 @@ function initGallery(result) {
         //添加点击事件
         btn.click(function () {
             $.ajax({
-                url:"http://10.0.57.28:8080/Gallery/updateById",
+                url:"http://120.25.237.83:8096/Gallery/updateById",
                 type:"PUT",
 				xhrFields: {
 					withCredentials: true, // 这里设置了withCredentials
@@ -92,7 +92,7 @@ function initGallery(result) {
         delBtn.click(function () {
             if(confirm("是否删除")){
                 $.ajax({
-                    url:"http://10.0.57.28:8080/Gallery/"+item.id,
+                    url:"http://120.25.237.83:8096/Gallery/"+item.id,
                     type:"DELETE",
 					xhrFields: {
 						withCredentials: true, // 这里设置了withCredentials
@@ -134,7 +134,7 @@ function uploadGallery() {
     //表单的数据用ajax发送 避免页面跳转
     var fromData = new FormData($('#uploadForm')[0]);
     $.ajax({
-        url:"http://10.0.57.28:8080/uploadGallery",
+        url:"http://120.25.237.83:8096/uploadGallery",
         dataType:"json",
         type:"POST",
 		xhrFields: {

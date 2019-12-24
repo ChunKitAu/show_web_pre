@@ -1,6 +1,6 @@
 $("#logout").click(function () {
     // var host = "http://127.0.0.1:8080";
-    var host = "http://10.0.57.28:8080";
+    var host = "http://120.25.237.83:8096";
     if(confirm("确定要退出吗?")){
         $.ajax({
             url:host+"/logout",

@@ -1,5 +1,5 @@
 // var host = "http://127.0.0.1:8080";
-var host = "http://10.0.57.28:8080";
+var host = "http://120.25.237.83:8096";
 $(function () {
     toPage(1);
 });
@@ -82,7 +82,7 @@ function build_seeker_table(result) {
 
             if(confirm("确定要删除 :"+item.title)+"  吗?"){
                 $.ajax({
-                    url:'http://10.0.57.28:8080/article/'+$(this).attr('ban_id'),
+                    url:'http://120.25.237.83:8096/article/'+$(this).attr('ban_id'),
                     type:'DELETE',
 					xhrFields: {
 						withCredentials: true, // 这里设置了withCredentials

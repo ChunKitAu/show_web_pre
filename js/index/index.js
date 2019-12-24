@@ -4,19 +4,16 @@ $(function () {
 })
 
 
-
-
-
 function getDemoList() {
 	
     $.ajax({
-        url: "http://10.0.57.28:8080/article/listByType",
+        url: "http://120.25.237.83:8096/article/listByType",
 		dataType: "json",
 		type: "get",
         data:{type:"学术动态"},
         success: function (result) {
             if (result.code == 200) {
-				console.log(result);
+				//console.log(result);
                 //数据回显
                 var contents = result.data.list;
                 $("#new1").empty();
@@ -45,7 +42,7 @@ function getDemoList() {
 
 function getLearningList() {
     $.ajax({
-		url: "http://10.0.57.28:8080/article/listByType",
+		url: "http://120.25.237.83:8096/article/listByType",
 		dataType: "json",
 		type: "get",
         data:{type:"项目案例/成果"},

@@ -1,12 +1,12 @@
 document.writeln("<div class=\'footer\'>");
 document.writeln("			<div class=\'ff center\'>");
 document.writeln("				<div class=\'fl f1\'>");
-document.writeln("					<img src=\'img/LOGO.png\' class=\'flogo\'>");
+document.writeln("					<img src=\'http://10.0.57.28/img/LOGO.png\' class=\'flogo\'>");
 document.writeln("				</div>");
 document.writeln("				<div class=\'fl f2\'>");
-document.writeln("					<div><img src=\'img/phone_icon.png\'><span>&nbsp;电话：0756-3622878</span></div>");
-document.writeln("					<div><img src=\'img/locate_icon.png\'><span>&nbsp;地址:广东省珠海市唐家湾金凤路6号 - 知行楼</br>&nbsp;&nbsp;&nbsp;&nbsp;邮编：519088</span></div>");
-document.writeln("					<div><img src=\'img/mail_icon.png\'><span>&nbsp;邮箱：zhbit@zhbit.com </span></div>");
+document.writeln("					<div><img src=\'http://10.0.57.28/img/phone_icon.png\'><span>&nbsp;电话：0756-3622878</span></div>");
+document.writeln("					<div><img src=\'http://10.0.57.28/img/locate_icon.png\'><span>&nbsp;地址:广东省珠海市唐家湾金凤路6号 - 知行楼</br>&nbsp;&nbsp;&nbsp;&nbsp;邮编：519088</span></div>");
+document.writeln("					<div><img src=\'http://10.0.57.28/img/mail_icon.png\'><span>&nbsp;邮箱：zhbit@zhbit.com </span></div>");
 document.writeln("				</div>");
 document.writeln("");
 document.writeln("");

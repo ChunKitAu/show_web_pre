@@ -25,11 +25,11 @@ function toPage(pn) {
 
 function getList(type) {
     $.ajax({
-        url: "http://10.0.57.28:8080/article/listByType",
+        url: "http://120.25.237.83:8096/article/listByType",
         type: "GET",
         data:{type:type},
         success: function (result) {
-			console.log(result);
+			// console.log(result);
             $("#newDiv").empty();
             if (result.code == 200) {
 
