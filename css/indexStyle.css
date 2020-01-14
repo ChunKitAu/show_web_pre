@@ -4,7 +4,7 @@
     text-decoration: none;
     list-style-type: none;
     font-family: 黑体;
-    overflow-x:hidden;
+
 
 }
 
@@ -26,7 +26,7 @@
 
 /*header*/
 header {
-    width: 100%;
+    min-width: 1200px;
     height: auto;
     overflow: hidden;
 }
@@ -47,23 +47,25 @@ header .tlogo img
 /*导航*/
 header .nav {
     width: 100%;
-    height: auto;
+    height: 50px;
     background: #2B589C;
     overflow: hidden;
     border-top: 8px solid #174D9E;
+    text-align: center;
 }
 
 header .nav1 {
-    width: 1200px;
-
+    width: 82%;
+    display: inline-block;
 }
 header .nav .nav1 ul{
     margin-bottom: 0;
+    display: inline-block;
 }
 header .nav .nav1 ul li {
     float: left;
     margin: 0;
-    height: auto;
+    height: 50px;
 }
 
 header .nav .nav1 ul li:hover {
@@ -74,7 +76,7 @@ header .nav .nav1 ul li a {
     display: block;
     margin : 12px;
     padding: 0 40px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 黑体;
     color: #FFFFFF;
     text-decoration: none;
@@ -92,19 +94,19 @@ header div a img {
 
 /*公告部分*/
 .info {
-    width: 100%;
+    min-width: 1200px;
     height: 400px;
     margin-top: 40px;
     line-height:1;
 }
 
 .info1 {
-    width: 1000px;
+    width: 70%;
     height: 350px;
 }
 
 .info1 .left {
-    width: 400px;
+    width: 45%;
     height: auto;
     float: left;
 }
@@ -142,7 +144,7 @@ header div a img {
 }
 
 .info1 .right {
-    width: 400px;
+    width: 45%;
     height: auto;
     float: right;
 }
@@ -152,7 +154,7 @@ header div a img {
 }
 
 .title_1 {
-    width: 400px;
+    width: 100%;
 }
 
 .title_1 h3 {
@@ -168,7 +170,7 @@ header div a img {
 
 
 .title_2 {
-    width: 400px;
+    width: 100%;
 }
 
 .title_2 h3 {
@@ -209,7 +211,7 @@ header div a img {
 
 /*页脚*/
 .footer{
-    width: 100%;
+    min-width: 1200px;
     height: 200px;
     margin-top:120px;
     color: white;
@@ -275,7 +277,7 @@ header div a img {
 
 .ctn .left{
     float: left;
-    width: 280px;
+    width: 20%;
     height: auto;
     margin-top: 20px;
     border-color: #6E6E6E;
@@ -287,6 +289,7 @@ header div a img {
 .pos{
     background: #174D9E;
     height: 50px;
+    overflow-x:hidden;
 }
 .pos1{
     margin-top: 15px;
@@ -356,9 +359,10 @@ header div a img {
 
 .ctn .right {
     float: right;
-    width: 800px;
+    width: 70%;
     margin-top: 20px;
     line-height:normal;
+    overflow: hidden;
 }
 
 .ctn .right .new {
@@ -407,7 +411,7 @@ header div a img {
 /*画廊*/
 .slider {
     overflow: hidden;
-    width: 100vw;
+    min-width: 1200px;
     position: relative;
 }
 
