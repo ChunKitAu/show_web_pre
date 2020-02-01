@@ -22,25 +22,25 @@ $(function () {
     }
 
 });
-
+//数据回显
 function getValue(id){
     $.ajax({
         url: host+"/article/getById",
         type: "GET",
 		dataType:"json",
 		data:{id:id},
-		xhrFields: {
-			withCredentials: true, // 这里设置了withCredentials
-		},
+        headers : {'Authorization':token},
         success: function (result) {
-			
+			console.log(result);
             if (result.code == 200) {
                 //数据回显
                 $('#title').val(result.data.title);
                 $('#type').val(result.data.type);
                 $('#reblog').val(result.data.reblog);
                 $('#author').val(result.data.author);
-                $('#editor1').val(result.data.content);
+                CKEDITOR.instances.editor1.setData(result.data.content);
+                // $('#editor1').val(result.data.content);
+                console.log(1);
             }
 			
 			if(result.code == 401){
@@ -60,10 +60,8 @@ function Submit(){
             url:host+"/article",
             dataType:"json",
             type:"POST",
-			jsonp:"callback", 
-			xhrFields: {
-				withCredentials: true, // 这里设置了withCredentials
-			},
+			jsonp:"callback",
+            headers : {'Authorization':token},
             data:{
                 id:id,
                 title:$("#title").val(),
@@ -92,10 +90,8 @@ function Submit(){
             url:host+"/article",
             dataType:"json",
             type:"PUT",
-			jsonp:"callback", 
-			xhrFields: {
-				withCredentials: true, // 这里设置了withCredentials
-			},
+			jsonp:"callback",
+            headers : {'Authorization':token},
             data:{
                 id:id,
                 title:$("#title").val(),
@@ -129,9 +125,7 @@ $("#type").change(function () {
         $.ajax({
             url: host+"/article/getIdByType?type=" + val,
             type: "GET",
-			xhrFields: {
-				withCredentials: true, // 这里设置了withCredentials
-			},
+            headers : {'Authorization':token},
             success: function (result) {
                 console.log(result);
                 if(result.data != null){

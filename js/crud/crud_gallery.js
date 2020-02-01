@@ -1,4 +1,8 @@
 var totalRecord, currentPage;
+
+// var host = "http://127.0.0.1:8080";
+var host = "http://120.25.237.83:8096";
+
 $(function () {
     toPage(1);
 });
@@ -6,13 +10,10 @@ $(function () {
 function toPage(pn) {
     currentPage = pn;
     $.ajax({
-        url: "http://120.25.237.83:8096/Gallery/list?pn=" + pn,
+        url: host+"/Gallery/list?pn=" + pn,
         type: "GET",
-		xhrFields: {
-			withCredentials: true, // 这里设置了withCredentials
-		},
+        headers : {'Authorization':token},
         success: function (result) {
-			
 			if(result.code == 401){
 				window.location.href = "login.html";
 			}
@@ -20,8 +21,6 @@ function toPage(pn) {
 				 initGallery(result)
 			
 			}
-			
-           
         },
         error: function () {
             alert("error..");
@@ -31,8 +30,6 @@ function toPage(pn) {
 
 function initGallery(result) {
     $("#div0").empty();
-
-
     var gallerys = result.data.list;
 
     //动态生成图片样式
@@ -61,11 +58,9 @@ function initGallery(result) {
         //添加点击事件
         btn.click(function () {
             $.ajax({
-                url:"http://120.25.237.83:8096/Gallery/updateById",
+                url:host+"/Gallery/updateById",
                 type:"PUT",
-				xhrFields: {
-					withCredentials: true, // 这里设置了withCredentials
-				},
+                headers : {'Authorization':token},
                 data:{
                     id:item.id,
                     select:item.isSelect==0?1:0,
@@ -92,11 +87,9 @@ function initGallery(result) {
         delBtn.click(function () {
             if(confirm("是否删除")){
                 $.ajax({
-                    url:"http://120.25.237.83:8096/Gallery/"+item.id,
+                    url:host+"/Gallery/"+item.id,
                     type:"DELETE",
-					xhrFields: {
-						withCredentials: true, // 这里设置了withCredentials
-					},
+                    headers : {'Authorization':token},
                     success:function (result) {
                         if(result.code == 200){
                             alert("删除成功");
@@ -134,12 +127,10 @@ function uploadGallery() {
     //表单的数据用ajax发送 避免页面跳转
     var fromData = new FormData($('#uploadForm')[0]);
     $.ajax({
-        url:"http://120.25.237.83:8096/uploadGallery",
+        url:host+"/uploadGallery",
         dataType:"json",
         type:"POST",
-		xhrFields: {
-			withCredentials: true, // 这里设置了withCredentials
-		},
+        headers : {'Authorization':token},
         data:fromData,
         contentType: false,
         processData: false,

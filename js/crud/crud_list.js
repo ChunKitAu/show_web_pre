@@ -7,17 +7,15 @@ $(function () {
 
 function toPage(pn) {
     var totalRecord, currentPage;
-	
+    console.log(token);
     $.ajax({
         url: host+"/article/list?pn=" + pn,
         type: "GET",
 		dataType:'json',
 		crossDomain: true,
-		xhrFields: {
-			withCredentials: true, // 这里设置了withCredentials
-		},
+        headers : {'Authorization':token},
         success: function (result) {
-			// console.log(result);
+			console.log(result);
 			
 			if(result.code == 401){
 				// console.log(result);
@@ -68,7 +66,6 @@ function build_seeker_table(result) {
             window.location.href = "crud_write.html?id=" + item.id;
         });
         var editTd = $("<td></td>").append(editBtn);
-
         var delBtn = $("<button></button>").addClass("btn btn-danger btn-sm ban_btn").append("删除");;
 
         //添加一个自定义属性,用来表示要禁止的id
@@ -82,11 +79,9 @@ function build_seeker_table(result) {
 
             if(confirm("确定要删除 :"+item.title)+"  吗?"){
                 $.ajax({
-                    url:'http://120.25.237.83:8096/article/'+$(this).attr('ban_id'),
+                    url:host+'/article/'+$(this).attr('ban_id'),
                     type:'DELETE',
-					xhrFields: {
-						withCredentials: true, // 这里设置了withCredentials
-					},
+                    headers : {'Authorization':token},
                     success:function (result) {
                         alert("删除成功");
                         toPage(currentPage);
@@ -112,8 +107,3 @@ function build_seeker_table(result) {
     })
 }
 
-function getUrlString(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) return unescape(r[2]); return null;
-}

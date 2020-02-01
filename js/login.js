@@ -9,15 +9,18 @@ function login() {
 		type: "POST",
 		data: $("#loginForm").serialize(),
 		crossDomain: true,
-		xhrFields: {
-			withCredentials: true, // 这里设置了withCredentials
-		},
-		success: function(result,xhr) {
+		// xhrFields: {
+		// 	withCredentials: true, // 携带cookie
+		// },
+		success: function(result) {
 			console.log(result);
 			if (result.code == 200) {
+				var token = result.data.token;
+				var time = new Date().getTime();
+				window.localStorage.setItem("myToken",token+"*"+time);
 				window.location.href = "crud_list.html";
 			}
-			if (result.code == 1000) {
+			if (result.code == 500) {
 				alert(result.data);
 			}
 		},
